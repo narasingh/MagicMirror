@@ -685,5 +685,3 @@ Log.info('error');
 Log.log('log');
 Log.error('info');
 ````
-
-
