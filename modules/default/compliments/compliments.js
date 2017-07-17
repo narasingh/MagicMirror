@@ -38,6 +38,9 @@ Module.register("compliments", {
 	// Set currentweather from module
 	currentWeatherType: "",
 
+	// set current logged in user
+	current_user: null,
+
 	// Define required scripts.
 	getScripts: function() {
 		return ["moment.js"];
@@ -142,19 +145,16 @@ Module.register("compliments", {
 	randomCompliment: function() {
 		var compliments = this.complimentArray();
 		var index = this.randomIndex(compliments);
-
-		return compliments[index];
+		return this.current_user ? compliments[index].replace("{user}", this.current_user) : ""; //compliments[index].replace("{user}", "");
 	},
 
 	// Override dom generator.
 	getDom: function() {
 		var complimentText = this.randomCompliment();
-
 		var compliment = document.createTextNode(complimentText);
 		var wrapper = document.createElement("div");
 		wrapper.className = this.config.classes ? this.config.classes : "thin xlarge bright";
 		wrapper.appendChild(compliment);
-
 		return wrapper;
 	},
 
@@ -189,6 +189,9 @@ Module.register("compliments", {
 	notificationReceived: function(notification, payload, sender) {
 		if (notification == "CURRENTWEATHER_DATA") {
 			this.setCurrentWeatherType(payload.data);
+		} if(notification == "CURRENT_USER") {
+			this.current_user = payload;
+			this.updateDom();
 		}
 	},
 

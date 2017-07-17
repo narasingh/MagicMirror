@@ -130,7 +130,7 @@ var config = {
 				// positive match.  Confidence values below this threshold will be considered
 				// a positive match because the lower the confidence value, or distance, the
 				// more confident the algorithm is that the face was correctly detected.
-				lbphThreshold: 50,
+				lbphThreshold: 80,
 				fisherThreshold: 250,
 				eigenThreshold: 3000,
 				// force the use of a usb webcam on raspberry pi (on other platforms this is always true automatically)
@@ -142,7 +142,7 @@ var config = {
 				// Logout delay after last recognition so that a user does not get instantly logged out if he turns away from the mirror for a few seconds
 				logoutDelay: 15,
 				// Array with usernames (copy and paste from training script)
-				users: ["narasingh"],
+				users: ["aneesh", "chinmayee", "narasingh", "rituraj"],
 				//Module set used for strangers and if no user is detected
 				defaultClass: "default",
 				//Set of modules which should be shown for every user
