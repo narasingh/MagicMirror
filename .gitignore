@@ -57,14 +57,6 @@ Temporary Items
 !/modules/node_helper
 !/modules/node_helper/**
 
-# Ignore all modules except the bellow.
-/modules/**
-!/modules/default
-!/modules/default/**
-!/modules/MMM-Facial-Recognition
-!/modules/MMM-Facial-Recognition/**
-!/modules/README.md**
-
 # Ignore changes to the custom css files.
 /css/custom.css
 

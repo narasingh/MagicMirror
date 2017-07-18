@@ -150,6 +150,39 @@ var config = {
 				// Boolean to toggle welcomeMessage
 				welcomeMessage: true
 			}
+		},
+		{
+			module: "MMM-Modulebar",
+			position: "bottom_center",
+			classes: "default everyone",
+			config: {
+				showBorder: true,
+				buttons: {
+					"1": {
+						module: "currentweather",
+						symbol: "cloud"
+					},
+					"2": {
+						module: "clock",
+						symbol: "music"
+					},
+					"3": {
+						module: "compliments",
+						symbol: "youtube"
+					},
+					"4": {
+						module: "calendar",
+						symbol: "globe"
+					}
+				}
+			}
+		},
+		{
+			module: "MMM-voice",
+			position: "bottom_bar",
+			config: {
+				microphone: 1
+			}
 		}
 	]
 
