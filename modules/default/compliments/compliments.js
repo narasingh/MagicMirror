@@ -32,7 +32,8 @@ Module.register("compliments", {
 		},
 		updateInterval: 30000,
 		remoteFile: null,
-		fadeSpeed: 4000
+		fadeSpeed: 4000,
+		enableRepeat: true
 	},
 
 	// Set currentweather from module
@@ -60,9 +61,11 @@ Module.register("compliments", {
 
 		// Schedule update timer.
 		var self = this;
-		setInterval(function() {
-			self.updateDom(self.config.fadeSpeed);
-		}, this.config.updateInterval);
+		if(this.config.enableRepeat) {
+			setInterval(function() {
+				self.updateDom(self.config.fadeSpeed);
+			}, this.config.updateInterval);
+		}
 	},
 
 	/* randomIndex(compliments)
@@ -145,7 +148,7 @@ Module.register("compliments", {
 	randomCompliment: function() {
 		var compliments = this.complimentArray();
 		var index = this.randomIndex(compliments);
-		return this.current_user ? compliments[index].replace("{user}", this.current_user) : ""; //compliments[index].replace("{user}", "");
+		return this.current_user && this.current_user !== "None" ? compliments[index].replace("{user}", this.current_user) : "";
 	},
 
 	// Override dom generator.
@@ -192,6 +195,13 @@ Module.register("compliments", {
 		} if(notification == "CURRENT_USER") {
 			this.current_user = payload;
 			this.updateDom();
+
+			// hide it after some time
+			if(!this.config.enableRepeat) {
+				this.hide(this.config.updateInterval, function() {
+					Log.log(this.name + " is hidden");
+				}, { lockString: this.identifier });
+			}
 		}
 	},
 

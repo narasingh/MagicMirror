@@ -240,3 +240,7 @@ sup {
   border-spacing: 0;
   border-collapse: separate;
 }
+
+.MMM-Traffic{
+  max-width: 310px;
+}

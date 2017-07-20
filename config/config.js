@@ -72,7 +72,8 @@ var config = {
 						"Wow {user}, you looks hot today!",
 						"Hey {user}, you looks nice!"
 					]
-				}
+				},
+				enableRepeat: false
 			}
 		},
 		{
@@ -122,7 +123,7 @@ var config = {
 		{
 			module: "MMM-Facial-Recognition",
 			position: "middle_center",
-			classes: "narasingh",
+			classes: "hide",
 			config: {
 				// 1=LBPH | 2=Fisher | 3=Eigen
 				recognitionAlgorithm: 1,
@@ -142,7 +143,7 @@ var config = {
 				// Logout delay after last recognition so that a user does not get instantly logged out if he turns away from the mirror for a few seconds
 				logoutDelay: 15,
 				// Array with usernames (copy and paste from training script)
-				users: ["aneesh", "chinmayee", "narasingh", "rituraj"],
+				users: ["aneesh", "chinmayee", "joy", "narasingh", "rituraj"],
 				//Module set used for strangers and if no user is detected
 				defaultClass: "default",
 				//Set of modules which should be shown for every user
@@ -177,11 +178,44 @@ var config = {
 				}
 			}
 		},
-		{
+		/*{
 			module: "MMM-voice",
 			position: "bottom_bar",
 			config: {
 				microphone: 1
+			}
+		},*/
+		{
+			module: "MMM-Traffic",
+			position: "top_left",
+			classes: "dimmed medium default everyone", //optional, default is "bright medium", only applies to commute info not route_name
+			config: {
+				api_key: "AIzaSyC69ABPDSem3TkIwm8YVnmW7_jotaqU2zA",
+				mode: "driving",
+				origin: "Murgeshpalya, H A L Old Airport Road, Ramagiri, Murgesh Pallya, Bengaluru, Karnataka",
+				destination: "Embassy Golf Links Business Park, Challaghatta, Bengaluru, Karnataka, India",
+				mon_destination: "Embassy Golf Links Business Park, Challaghatta, Bengaluru, Karnataka, India",
+				fri_destination: "Manayata Tech Park, Bengaluru, Karnataka, India",
+				arrival_time: "0930", //optional, but needs to be in 24 hour time if used.
+				route_name: "Home to Work",
+				changeColor: true,
+				showGreen: false,
+				limitYellow: 5, //Greater than 5% of journey time due to traffic
+				limitRed: 20, //Greater than 20% of journey time due to traffic
+				traffic_model: "optimistic",
+				interval: 120000, //2 minutes
+				showWeekend: false,
+				allTime: false
+			}
+		},
+		{
+			module: "MMM-Profilepicture",
+			position: "middle_center",
+			classes: "narasingh",
+			config: {
+				// See below for configurable options
+				url: "https://scontent.fblr2-1.fna.fbcdn.net/v/t1.0-1/p320x320/13902597_10208366924025602_7537456289282947226_n.jpg?oh=d0e3354517356aaaf75f3354c3836298&oe=5A09364B",
+				opacity: "0.1"
 			}
 		}
 	]
