@@ -56,6 +56,7 @@ Temporary Items
 # Don't ignore the node_helper core module.
 !/modules/node_helper
 !/modules/node_helper/**
+!/modules/node_modules
 
 # Ignore changes to the custom css files.
 /css/custom.css
