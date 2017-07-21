@@ -187,20 +187,36 @@ Module.register("compliments", {
 		this.currentWeatherType = weatherIconTable[data.weather[0].icon];
 	},
 
+	/*
+	 module toggle show/hide based on logged in
+	*/
+	toggleVisibility: function() {
+
+		var self = this;
+
+		if(this.hidden && this.current_user && this.current_user !== "None") {
+			//show
+			this.show(1000, function() {
+				Log.log(this.name + " is shown");
+			}, { lockString: this.identifier });
+		}
+		setTimeout(function() {
+			// hide text after sometime
+			self.hide(self.config.updateInterval, function() {
+				Log.log(self.name + " is hidden");
+			}, { lockString: self.identifier });
+		}, self.config.fadeSpeed);
+	},
 
 	// Override notification handler.
 	notificationReceived: function(notification, payload, sender) {
 		if (notification == "CURRENTWEATHER_DATA") {
 			this.setCurrentWeatherType(payload.data);
-		} if(notification == "CURRENT_USER") {
+		} if(notification == "SHOW_COMPLIMENTS_CURRENT_USER") {
 			this.current_user = payload;
-			this.updateDom();
-
-			// hide it after some time
 			if(!this.config.enableRepeat) {
-				this.hide(this.config.updateInterval, function() {
-					Log.log(this.name + " is hidden");
-				}, { lockString: this.identifier });
+				this.updateDom();
+				this.toggleVisibility();
 			}
 		}
 	},

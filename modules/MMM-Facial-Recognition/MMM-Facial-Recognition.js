@@ -106,7 +106,7 @@ Module.register('MMM-Facial-Recognition',{
 
 			if (this.config.welcomeMessage) {
 				//this.sendNotification("SHOW_ALERT", {type: "notification", message: this.translate("message").replace("%person", this.current_user), title: this.translate("title")});
-				this.sendNotification("CURRENT_USER", this.current_user);
+				this.sendNotification("SHOW_COMPLIMENTS_CURRENT_USER", this.current_user);
 			}
 		}
 		else if (payload.action == "logout"){

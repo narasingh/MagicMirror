@@ -73,7 +73,9 @@ var config = {
 						"Hey {user}, you looks nice!"
 					]
 				},
-				enableRepeat: false
+				enableRepeat: false,
+				updateInterval: 15000,
+				fadeSpeed: 10000
 			}
 		},
 		{
@@ -120,6 +122,7 @@ var config = {
 			module: "aiclientdebugger",
 			position: "bottom_right"
 		},
+		/*
 		{
 			module: "MMM-Facial-Recognition",
 			position: "middle_center",
@@ -151,7 +154,7 @@ var config = {
 				// Boolean to toggle welcomeMessage
 				welcomeMessage: true
 			}
-		},
+		},*/
 		{
 			module: "MMM-Modulebar",
 			position: "bottom_center",
@@ -178,13 +181,14 @@ var config = {
 				}
 			}
 		},
-		/*{
+		{
 			module: "MMM-voice",
 			position: "bottom_bar",
 			config: {
-				microphone: 1
+				microphone: 1,
+				keyword: "MAGIC MIRROR"
 			}
-		},*/
+		},
 		{
 			module: "MMM-Traffic",
 			position: "top_left",
@@ -207,7 +211,7 @@ var config = {
 				showWeekend: false,
 				allTime: false
 			}
-		},
+		}/*,
 		{
 			module: "MMM-Profilepicture",
 			position: "middle_center",
@@ -218,6 +222,7 @@ var config = {
 				opacity: "0.1"
 			}
 		}
+		*/
 	]
 
 };
