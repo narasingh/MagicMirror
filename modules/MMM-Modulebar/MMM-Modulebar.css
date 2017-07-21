@@ -1,0 +1,40 @@
+/*****************************************************
+ * Magic Mirror 2                                    *
+ * Custom CSS for MMM-modulebar                      *
+ *                                                   *
+ * By Erik Pettersson                                *
+ * Based on the TouchNavigation CSS by Brian Janssen *
+ * MIT Licensed.                                     *
+ *                                                   *
+ *****************************************************/
+.modulebar-menu {
+    display: flex;
+    align-items: stretch;
+}
+
+.modulebar-button {
+    z-index: 1;
+    /* Border */
+    border-style: solid;
+    border-width: 2px;
+    border-color: #aaa;
+    border-radius: 15px;
+
+    /* as container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 2px;
+    padding: 6px 6px;
+}
+
+.modulebar-picture {
+    margin: 1px 1px;
+/*    width: 60px;*/
+/*    height: 60px;*/
+}
+
+.modulebar-text {
+    margin: -5px 0;
+}
