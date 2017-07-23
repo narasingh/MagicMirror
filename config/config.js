@@ -163,8 +163,8 @@ var config = {
 				showBorder: true,
 				buttons: {
 					"1": {
-						module: "currentweather",
-						symbol: "cloud"
+						module: "MMM-uber",
+						symbol: "taxi"
 					},
 					"2": {
 						module: "clock",
@@ -181,14 +181,14 @@ var config = {
 				}
 			}
 		},
-		{
+		/*{
 			module: "MMM-voice",
 			position: "bottom_bar",
 			config: {
 				microphone: 1,
 				keyword: "MAGIC MIRROR"
 			}
-		},
+		},*/
 		{
 			module: "MMM-Traffic",
 			position: "top_left",
@@ -209,9 +209,21 @@ var config = {
 				traffic_model: "optimistic",
 				interval: 120000, //2 minutes
 				showWeekend: false,
-				allTime: false
+				allTime: true
 			}
 		}/*,
+		{
+			module: "MMM-uber",
+			position: "middle_center",
+			header: "Uber (DC)",
+			config: {
+				lat: 0,  // use your exact pickup loaction
+				lng: 0, // use your exact pickup loaction
+				uberServerToken: "FsYkd403qoqIertHWHSW0MOclZ7bcgOwa08aeDeJ",
+				apiKey: "AIzaSyC0VU50MLRy2OB09SWX1FoeSNNCw4qC_xE" // google map api
+			}
+		}*/
+		/*,
 		{
 			module: "MMM-Profilepicture",
 			position: "middle_center",
