@@ -1,0 +1,30 @@
+.MMM-uber {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	margin-top: 50px;
+	width: 40%;
+	margin: auto;
+}
+
+.MMM-uber .badge {
+	padding-right: 10px;
+}
+
+.MMM-uber .uberButton span {
+	font-family: 'Helvetica Neue';
+	font-weight: 300;
+	font-size: 16pt;
+	font-color: #C0C0C8;
+	/*padding: 10px;*/
+
+}
+.MMM-uber table {
+	border-left: 1px solid #999;
+	border-bottom: 1px solid #999;
+}
+.MMM-uber table td{
+	border-color: #999;
+	border-top: 1px solid;
+	border-right: 1px solid;
+}

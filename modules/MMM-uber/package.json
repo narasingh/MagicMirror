@@ -1,0 +1,21 @@
+{
+  "name": "Magic-Mirror-Module-Uber",
+  "version": "1.0.0",
+  "description": "Uber booking module for the Magic Mirror.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/narasingh/MMM-Traffic"
+  },
+  "keywords": [
+    "magic mirror",
+    "smart mirror",
+    "uber booking",
+    "module"
+  ],
+  "author": "Narasingh",
+  "license": "MIT",
+  "homepage": "https://github.com/narasingh/MMM-Traffic#readme",
+  "dependencies": {
+    "node-geocoder": "^3.18.0"
+  }
+}
