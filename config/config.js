@@ -122,7 +122,6 @@ var config = {
 			module: "aiclientdebugger",
 			position: "bottom_right"
 		},
-		/*
 		{
 			module: "MMM-Facial-Recognition",
 			position: "middle_center",
@@ -154,7 +153,7 @@ var config = {
 				// Boolean to toggle welcomeMessage
 				welcomeMessage: true
 			}
-		},*/
+		},
 		{
 			module: "MMM-Modulebar",
 			position: "bottom_center",
@@ -175,7 +174,7 @@ var config = {
 						symbol: "youtube"
 					},
 					"4": {
-						module: "calendar",
+						module: "MMM-googlemaps",
 						symbol: "globe"
 					}
 				}
@@ -211,7 +210,8 @@ var config = {
 				showWeekend: false,
 				allTime: true
 			}
-		}/*,
+		},
+		/*
 		{
 			module: "MMM-uber",
 			position: "middle_center",
@@ -223,6 +223,18 @@ var config = {
 				apiKey: "AIzaSyC0VU50MLRy2OB09SWX1FoeSNNCw4qC_xE" // google map api
 			}
 		}*/
+		{
+			module: "MMM-googlemaps",
+			position: "top_center",
+			classes: "default everyone",
+			config: {
+				apikey: "AIzaSyC69ABPDSem3TkIwm8YVnmW7_jotaqU2zA",
+				origin: "wind ternal road bangalore",
+				destination: "marathahalli bangalore",
+				width: "600",
+				height: "390"
+   		}
+		}
 		/*,
 		{
 			module: "MMM-Profilepicture",
