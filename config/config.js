@@ -115,14 +115,6 @@ var config = {
 			}
 		},
 		{
-			module: "aiclient",
-			position: "middle_center"
-		},
-		{
-			module: "aiclientdebugger",
-			position: "bottom_right"
-		},
-		{
 			module: "MMM-Facial-Recognition",
 			position: "middle_center",
 			classes: "hide",
