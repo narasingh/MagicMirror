@@ -203,19 +203,19 @@ var config = {
 				allTime: true
 			}
 		},
-		/*
 		{
 			module: "MMM-uber",
 			position: "middle_center",
 			header: "Uber (DC)",
+			classes: "default everyone",
 			config: {
 				lat: 0,  // use your exact pickup loaction
 				lng: 0, // use your exact pickup loaction
 				uberServerToken: "FsYkd403qoqIertHWHSW0MOclZ7bcgOwa08aeDeJ",
 				apiKey: "AIzaSyC0VU50MLRy2OB09SWX1FoeSNNCw4qC_xE" // google map api
 			}
-		}*/
-		{
+		},
+		/*{
 			module: "MMM-googlemaps",
 			position: "top_center",
 			classes: "default everyone",
@@ -226,8 +226,7 @@ var config = {
 				width: "600",
 				height: "390"
    		}
-		}
-		/*,
+		},*/
 		{
 			module: "MMM-Profilepicture",
 			position: "middle_center",
@@ -238,7 +237,6 @@ var config = {
 				opacity: "0.1"
 			}
 		}
-		*/
 	]
 
 };
