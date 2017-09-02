@@ -1,0 +1,117 @@
+Language model created by QuickLM on Tue Jul 18 13:32:36 EDT 2017
+Copyright (c) 1996-2010 Carnegie Mellon University and Alexander I. Rudnicky
+
+The model is in standard ARPA format, designed by Doug Paul while he was at MITRE.
+
+The code that was used to produce this language model is available in Open Source.
+Please visit http://www.speech.cs.cmu.edu/tools/ for more information
+
+The (fixed) discount mass is 0.5. The backoffs are computed using the ratio method.
+This model based on a corpus of 23 sentences and 25 words
+
+\data\
+ngram 1=25
+ngram 2=46
+ngram 3=23
+
+\1-grams:
+-0.7782 </s> -0.3010
+-0.7782 <s> -0.2218
+-2.1399 ALL -0.2218
+-2.1399 CLOSE -0.2218
+-2.1399 FAIREST -0.2218
+-2.1399 GO -0.2218
+-2.1399 HELP -0.2218
+-2.1399 HIDE -0.2218
+-2.1399 IS -0.2218
+-2.1399 MAGIC -0.2218
+-2.1399 MIRROR -0.2218
+-2.1399 MODULES -0.2218
+-2.1399 OF -0.2218
+-2.1399 ON -0.2218
+-2.1399 ONE -0.2218
+-2.1399 OPEN -0.2218
+-2.1399 SHOW -0.2218
+-2.1399 SLEEP -0.2218
+-2.1399 THE -0.2218
+-2.1399 TO -0.2218
+-2.1399 UP -0.2218
+-2.1399 VOICE -0.2218
+-2.1399 WAKE -0.2218
+-2.1399 WALL -0.2218
+-2.1399 WHO -0.2218
+
+\2-grams:
+-1.6628 <s> ALL 0.0000
+-1.6628 <s> CLOSE 0.0000
+-1.6628 <s> FAIREST 0.0000
+-1.6628 <s> GO 0.0000
+-1.6628 <s> HELP 0.0000
+-1.6628 <s> HIDE 0.0000
+-1.6628 <s> IS 0.0000
+-1.6628 <s> MAGIC 0.0000
+-1.6628 <s> MIRROR 0.0000
+-1.6628 <s> MODULES 0.0000
+-1.6628 <s> OF 0.0000
+-1.6628 <s> ON 0.0000
+-1.6628 <s> ONE 0.0000
+-1.6628 <s> OPEN 0.0000
+-1.6628 <s> SHOW 0.0000
+-1.6628 <s> SLEEP 0.0000
+-1.6628 <s> THE 0.0000
+-1.6628 <s> TO 0.0000
+-1.6628 <s> UP 0.0000
+-1.6628 <s> VOICE 0.0000
+-1.6628 <s> WAKE 0.0000
+-1.6628 <s> WALL 0.0000
+-1.6628 <s> WHO 0.0000
+-0.3010 ALL </s> -0.3010
+-0.3010 CLOSE </s> -0.3010
+-0.3010 FAIREST </s> -0.3010
+-0.3010 GO </s> -0.3010
+-0.3010 HELP </s> -0.3010
+-0.3010 HIDE </s> -0.3010
+-0.3010 IS </s> -0.3010
+-0.3010 MAGIC </s> -0.3010
+-0.3010 MIRROR </s> -0.3010
+-0.3010 MODULES </s> -0.3010
+-0.3010 OF </s> -0.3010
+-0.3010 ON </s> -0.3010
+-0.3010 ONE </s> -0.3010
+-0.3010 OPEN </s> -0.3010
+-0.3010 SHOW </s> -0.3010
+-0.3010 SLEEP </s> -0.3010
+-0.3010 THE </s> -0.3010
+-0.3010 TO </s> -0.3010
+-0.3010 UP </s> -0.3010
+-0.3010 VOICE </s> -0.3010
+-0.3010 WAKE </s> -0.3010
+-0.3010 WALL </s> -0.3010
+-0.3010 WHO </s> -0.3010
+
+\3-grams:
+-0.3010 <s> ALL </s>
+-0.3010 <s> CLOSE </s>
+-0.3010 <s> FAIREST </s>
+-0.3010 <s> GO </s>
+-0.3010 <s> HELP </s>
+-0.3010 <s> HIDE </s>
+-0.3010 <s> IS </s>
+-0.3010 <s> MAGIC </s>
+-0.3010 <s> MIRROR </s>
+-0.3010 <s> MODULES </s>
+-0.3010 <s> OF </s>
+-0.3010 <s> ON </s>
+-0.3010 <s> ONE </s>
+-0.3010 <s> OPEN </s>
+-0.3010 <s> SHOW </s>
+-0.3010 <s> SLEEP </s>
+-0.3010 <s> THE </s>
+-0.3010 <s> TO </s>
+-0.3010 <s> UP </s>
+-0.3010 <s> VOICE </s>
+-0.3010 <s> WAKE </s>
+-0.3010 <s> WALL </s>
+-0.3010 <s> WHO </s>
+
+\end\
