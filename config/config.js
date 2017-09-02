@@ -236,6 +236,16 @@ var config = {
 				url: "https://scontent.fblr2-1.fna.fbcdn.net/v/t1.0-1/p320x320/13902597_10208366924025602_7537456289282947226_n.jpg?oh=d0e3354517356aaaf75f3354c3836298&oe=5A09364B",
 				opacity: "0.1"
 			}
+		},
+		{
+			module: "MMM-PIR-Sensor",
+			config: {
+				sensorPIN: 7,
+				invertSensorValue: 10,
+				powerSaving: true,
+				powerSavingDelay: 0,
+				relayOnState: 1
+			}
 		}
 	]
 
