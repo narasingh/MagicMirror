@@ -129,7 +129,7 @@ var config = {
 				fisherThreshold: 250,
 				eigenThreshold: 3000,
 				// force the use of a usb webcam on raspberry pi (on other platforms this is always true automatically)
-				useUSBCam: false,
+				useUSBCam: true,
 				// Path to your training xml
 				trainingFile: "modules/MMM-Facial-Recognition/training.xml",
 				// recognition intervall in seconds (smaller number = faster but CPU intens!)
@@ -203,6 +203,7 @@ var config = {
 				allTime: true
 			}
 		},
+		/*
 		{
 			module: "MMM-uber",
 			position: "middle_center",
@@ -214,7 +215,7 @@ var config = {
 				uberServerToken: "FsYkd403qoqIertHWHSW0MOclZ7bcgOwa08aeDeJ",
 				apiKey: "AIzaSyC0VU50MLRy2OB09SWX1FoeSNNCw4qC_xE" // google map api
 			}
-		},
+		},*/
 		/*{
 			module: "MMM-googlemaps",
 			position: "top_center",
@@ -236,8 +237,7 @@ var config = {
 				url: "https://scontent.fblr2-1.fna.fbcdn.net/v/t1.0-1/p320x320/13902597_10208366924025602_7537456289282947226_n.jpg?oh=d0e3354517356aaaf75f3354c3836298&oe=5A09364B",
 				opacity: "0.1"
 			}
-		}
-		/*,
+		}/*,
 		{
 			module: "MMM-PIR-Sensor",
 			config: {
@@ -247,8 +247,7 @@ var config = {
 				powerSavingDelay: 0,
 				relayOnState: 1
 			}
-		}
-		*/
+		}*/
 	]
 
 };
