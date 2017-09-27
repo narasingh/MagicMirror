@@ -137,7 +137,7 @@ var config = {
 				// Logout delay after last recognition so that a user does not get instantly logged out if he turns away from the mirror for a few seconds
 				logoutDelay: 15,
 				// Array with usernames (copy and paste from training script)
-				users: ["aneesh", "chinmayee", "joy", "narasingh", "rituraj"],
+				users: ["aneesh", "joy", "narasingh", "rituraj", "umesh"],
 				//Module set used for strangers and if no user is detected
 				defaultClass: "default",
 				//Set of modules which should be shown for every user
