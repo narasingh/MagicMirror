@@ -49,6 +49,7 @@ def get_camera():
             cam = picam.OpenCVCapture()
             cam.start()
             return cam
+	    #return picam.OpenCVCapture();
         else:
             raise Exception
     except Exception:
