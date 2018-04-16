@@ -247,7 +247,7 @@ var config = {
 				powerSavingDelay: 0,
 				relayOnState: 1
 			}
-		}	
+		}
 	]
 
 };
