@@ -66,7 +66,9 @@ var config = {
 						"Hello {user} have a nice day"
 					],
 					afternoon: [
-						"{user}, looking good today"
+						"{user}, looking good today",
+						"Hi {user}, you looks awesome today",
+						"Hey {user}, you looks nice!"
 					],
 					evening: [
 						"Wow {user}, you looks hot today!",
@@ -247,7 +249,7 @@ var config = {
 				powerSavingDelay: 0,
 				relayOnState: 1
 			}
-		}	
+		}
 	]
 
 };
