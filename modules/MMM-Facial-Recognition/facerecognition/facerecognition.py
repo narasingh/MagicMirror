@@ -38,7 +38,7 @@ def to_node(type, message):
 to_node("status", "Facerecognition started...")
 
 # Time to wait until display should turn off after last motion detected
-timeUntilDisplayOff = 1800
+timeUntilDisplayOff = 60
 # The GPIO data pin to which the PIR sensor is connected
 pin = 7
 
@@ -51,7 +51,7 @@ last_match = None
 detection_active = False
 login_timestamp = time.time()
 same_user_detected_in_row = 0
-	
+
 # Load training data into model
 to_node("status", 'Loading training data...')
 
@@ -88,17 +88,17 @@ while True:
     # Sleep for x seconds specified in module config
     to_node("status", "listening!!")
     time.sleep(config.get("interval"))
-    
+
     if pir.motion_detected:
 		timer = timeUntilDisplayOff
 		detection_active = True
-		to_node('status', 'Motion detected!! setting time to' + str(timer) + ' seconds') 
-	
+		to_node('status', 'Motion detected!! setting time to' + str(timer) + ' seconds')
+
     if timer > 0:
         if timer % 5 == 0:
             to_node('status', 'Timer: ' + str(timer) + ' seconds')
 	timer -= 1
-				
+
     # if detecion is true, will be used to disable detection if you use a PIR sensor and no motion is detected
     if detection_active is True:
         # Get image
@@ -158,7 +158,7 @@ while True:
     elif timer == 0:
 	call(['vcgencmd', 'display_power', '0'])
 
-	to_node('status', 'Timer is 0. Display turned off. Waiting for motion...') 
+	to_node('status', 'Timer is 0. Display turned off. Waiting for motion...')
 	# display is now off. we wait for motion and turn it on
 	detection_active = False
 	pir.wait_for_motion()
