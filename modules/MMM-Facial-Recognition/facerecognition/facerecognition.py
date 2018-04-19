@@ -21,9 +21,6 @@ import face
 import cv2
 import config
 import signal
-from gpiozero import MotionSensor
-from subprocess import call
-from time import sleep
 
 def to_node(type, message):
     # convert to json and print (node helper will read from stdout)
@@ -37,18 +34,10 @@ def to_node(type, message):
 
 to_node("status", "Facerecognition started...")
 
-# Time to wait until display should turn off after last motion detected
-timeUntilDisplayOff = 60
-# The GPIO data pin to which the PIR sensor is connected
-pin = 7
-
-pir = MotionSensor(pin)
-timer = timeUntilDisplayOff
-
 # Setup variables
 current_user = None
 last_match = None
-detection_active = False
+detection_active = True
 login_timestamp = time.time()
 same_user_detected_in_row = 0
 
@@ -86,19 +75,7 @@ time.sleep(1)
 # Main Loop
 while True:
     # Sleep for x seconds specified in module config
-    to_node("status", "listening!!")
     time.sleep(config.get("interval"))
-
-    if pir.motion_detected:
-		timer = timeUntilDisplayOff
-		detection_active = True
-		to_node('status', 'Motion detected!! setting time to' + str(timer) + ' seconds')
-
-    if timer > 0:
-        if timer % 5 == 0:
-            to_node('status', 'Timer: ' + str(timer) + ' seconds')
-	timer -= 1
-
     # if detecion is true, will be used to disable detection if you use a PIR sensor and no motion is detected
     if detection_active is True:
         # Get image
@@ -108,7 +85,6 @@ while True:
         # Get coordinates of single face in captured image.
         result = face.detect_single(image)
         # No face found, logout user?
-
         if result is None:
             # if last detection exceeds timeout and there is someone logged in -> logout!
             if (current_user is not None and time.time() - login_timestamp > config.get("logoutDelay")):
@@ -155,12 +131,3 @@ while True:
             to_node("login", {"user": current_user, "confidence": None})
         else:
             continue
-    elif timer == 0:
-	call(['vcgencmd', 'display_power', '0'])
-
-	to_node('status', 'Timer is 0. Display turned off. Waiting for motion...')
-	# display is now off. we wait for motion and turn it on
-	detection_active = False
-	pir.wait_for_motion()
-	call(['vcgencmd', 'display_power', '1'])
-	timer = timeUntilDisplayOff

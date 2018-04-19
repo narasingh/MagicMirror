@@ -139,7 +139,7 @@ var config = {
 				// Logout delay after last recognition so that a user does not get instantly logged out if he turns away from the mirror for a few seconds
 				logoutDelay: 15,
 				// Array with usernames (copy and paste from training script)
-				users: ["Aneesh", "Joy", "Narasingh", "Rakesh", "Rituraj", "Umesh", "Varghese"],
+				users: ["Aneesh", "Dudecula", "Joy", "Narasingh", "Rakesh", "Rituraj", "Umesh", "Varghese"],
 				//Module set used for strangers and if no user is detected
 				defaultClass: "default",
 				//Set of modules which should be shown for every user
@@ -239,7 +239,7 @@ var config = {
 				url: "https://scontent.fblr2-1.fna.fbcdn.net/v/t1.0-1/p320x320/13902597_10208366924025602_7537456289282947226_n.jpg?oh=d0e3354517356aaaf75f3354c3836298&oe=5A09364B",
 				opacity: "0.1"
 			}
-		},
+		}/*,
 		{
 			module: "MMM-PIR-Sensor",
 			config: {
@@ -249,7 +249,7 @@ var config = {
 				powerSavingDelay: 0,
 				relayOnState: 1
 			}
-		}
+		}*/
 	]
 
 };
